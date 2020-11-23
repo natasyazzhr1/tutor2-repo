@@ -1,16 +1,16 @@
 <template>
-  <div class="card-container">
-    <transition name="fade">
+  <transition name="fade">
+    <div class="card-container">
       <h1 :class="checkLikes()">
         {{ post.judul }}
       </h1>
-    </transition>
-    <p>{{ post.caption }}</p>
-    <span>{{ post.likes }}</span>
-    <v-btn class="pink white--text" flat @click="post.likes++">
-      Click Me!
-    </v-btn>
-  </div>
+      <p>{{ post.caption }}</p>
+      <span>{{ post.likes }}</span>
+      <v-btn class="pink white--text" @click="post.likes++">
+        Click Me!
+      </v-btn>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -49,7 +49,6 @@
   text-align: center;
   transition: background-color 0.3s ease-in-out;
   &:hover {
-    cursor: pointer;
     background-color: #33333342;
   }
   @media only screen and (max-width: 600px) {
@@ -64,9 +63,10 @@
 }
     
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: all 2s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-50%) translateY(-100vh);
   opacity: 0;
 }
 .v-btn {

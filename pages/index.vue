@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <input v-model="input" type="text">
     <Card v-for="(post, index) in posts" :key="index" :post="post" />
   </div>
@@ -15,36 +15,32 @@ export default {
   },
   data() {
     return {
+      input: '',
       posts: [
         {
           judul: 'Ini vue dan nuxt 1',
           caption: 'GEP oke banget',
           likes: 0,
-          input: ''
         },
         {
           judul: 'Ini vue dan nuxt 2',
           caption: 'GEP oke banget',
           likes: 0,
-          input: ''
         },
         {
           judul: 'Ini vue dan nuxt 3',
           caption: 'GEP oke banget',
           likes: 0,
-          input: ''
         },
         {
           judul: 'Ini vue dan nuxt 4',
           caption: 'GEP oke banget',
           likes: 0,
-          input: ''
         },
         {
           judul: 'Ini vue dan nuxt 5',
           caption: 'GEP oke banget',
           likes: 0,
-          input: ''
         }
       ]
     }
@@ -58,5 +54,11 @@ export default {
 }
 .merah {
   color: green;
+}
+input {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 0 5px;
+  outline: none;
 }
 </style>
