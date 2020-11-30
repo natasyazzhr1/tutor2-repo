@@ -1,13 +1,13 @@
 <template>
   <div>
-    ini profile page kmu
+    ini todo
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-}
+  export default {
+    name: 'Todo'
+  }
 </script>
 
 <style lang="scss" scoped>
